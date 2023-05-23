@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css2?family=Public+Sans&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  height: 100%;
+}
+
+body {
+  font-family: "Public Sans", sans-serif;
+  font-size: 1.2rem;
+  min-height: 100%;
+}
+
+.grid-container > * {
+  box-shadow: -1px 1px 7px 0px rgba(0, 0, 0, 0.75);
+  border-radius: 4px;
+  padding: 10px;
+  text-align: center;
+}
+
+.header {
+  grid-area: header;
+  padding: 5px;
+  background-color: #99FFCD
+  ;
+    text-align: center;
+    font-size: xx-large;
+  /*background-color: #85aedd;*/
+}
+
+.navbar {
+  grid-area: navbar;
+  /*background-color: #afd6af;*/
+  display: flex;
+    flex-direction: row;
+    
+    background-color: #9FB4FF
+}
+
+.sidebar {
+  margin-top: 100px;
+  margin-bottom: 100px;
+  margin-left: 10px;
+  margin-right: 5px;
+  padding: 60px;
+  grid-area: sidebar;
+  background-color: #FFD36E
+  ;
+}
+.centrado{
+  text-align: center;
+  font-size:larger;
+  text-decoration:underline solid  ;
+}
+
+.main {
+  grid-area: main;
+  background-color: #FFF56D
+  ;
+  text-align:justify;
+  font-size: x-large;
+}
+
+.footer {
+  grid-area: footer;
+  background-color: #9FB4FF
+  ;
+    font-size: larger;
+  /*background-color: #8c96a0;*/
+}
+
+.grid-container {
+  display: grid;
+  gap: 10px;
+  grid-template:
+    "navbar"  70px
+    "header"  50px
+    "main"    auto
+    "sidebar" 100px
+    "footer"  100px;
+}
+
+@media (min-width: 900px) {
+  .grid-container {
+    grid-template:
+      "navbar navbar navbar"  70px
+      "header header header"   50px
+      "sidebar main   main" auto
+      "footer  footer footer"  100px /
+      300px    auto   200px;
+  }
+}
